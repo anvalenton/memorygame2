@@ -1,0 +1,108 @@
+html,
+body {
+	background: #200039;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+
+#container {
+	width: 100%;
+	min-height: 100vh;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.circontainer {
+	position: relative;
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	margin: 10px;
+}
+
+.cirbase {
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	margin: 10px;
+	transform-style: preserve-3d;
+	transition: all 2s ease;
+}
+
+.circlicked {
+	transform: rotateY(180deg);
+}
+
+.circompleted {
+	transform: rotateY(180deg);
+}
+
+.cirfront {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	backface-visibility: hidden;
+	background: darkblue !important;
+}
+
+.cirback {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	backface-visibility: hidden;
+	transform: rotateY(180deg);
+}
+
+#row1#row2#row3#row4 {
+	width: 100vw;
+	height: 25vh;
+	align-items: center;
+	perspective: 600px;
+}
+
+#row1 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	margin-top: -80px;
+	width: 100%;
+}
+
+#row2 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 115vw;
+	margin-left: -70px;
+	margin-right: -10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#row3 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	width: 100%;
+}
+
+#row4 {
+	display: flex;
+	flex-direction: row;
+	align-self: flex-end;
+	justify-content: space-between;
+	width: 115vw;
+	margin-left: -70px;
+	margin-right: -10px;
+	margin-bottom: -70px;
+}
